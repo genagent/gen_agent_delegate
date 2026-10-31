@@ -233,7 +233,7 @@ defmodule GenAgent.Delegation.PluginPackage do
 
   def build_runtime!(runtime) do
     unless Mix.Project.config()[:app] == :gen_agent_delegation,
-      do: fail!("Build from extensions/delegation so the release belongs to this package")
+      do: fail!("Build from the delegation directory so the release belongs to this package")
 
     unless Mix.env() == :prod, do: fail!("Build requires MIX_ENV=prod")
     Mix.Task.run("compile", ["--warnings-as-errors"])

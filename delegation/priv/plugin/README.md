@@ -20,7 +20,7 @@ Claude/Codex CLIs and authentication are host prerequisites.
 **Build** happens once, on a machine with provisioned dependencies:
 
 ```sh
-cd extensions/delegation
+cd delegation
 MIX_ENV=prod mix gen_agent.plugin.build --output /absolute/new/plugin-dir
 ```
 

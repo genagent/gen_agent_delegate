@@ -1,8 +1,9 @@
 # GenAgent Delegation
 
 Unpublished optional source package `:gen_agent_delegation`, locally versioned at
-`0.0.12`. Add `{:gen_agent_delegation, path: "extensions/delegation"}` to a
-consumer in this checkout (adjust the path relative to its `mix.exs`).
+`0.0.12`. Add `{:gen_agent_delegation, path: "path/to/gen_agent_delegate/delegation"}`
+to a consumer's `mix.exs`. It depends on published `gen_agent`,
+`gen_agent_claude` and `gen_agent_codex`, and on `../structured` in this repository.
 It owns the public `GenAgent.Delegation` manager, implementation modules under
 `GenAgent.Delegation.*`, task storage, profiles, MCP surface, canonical plugin
 skills/templates, and the local plugin exporter. Core and Ensemble do not depend

@@ -20,7 +20,7 @@ defmodule Mix.Tasks.GenAgent.Plugin.Build do
     unless Mix.env() == :prod, do: Mix.raise("Build requires MIX_ENV=prod")
 
     unless Mix.Project.config()[:app] == :gen_agent_delegation,
-      do: Mix.raise("Run from extensions/delegation")
+      do: Mix.raise("Run from the delegation directory")
 
     # Compile makes the helper available on a fresh checkout; it does not start apps.
     Mix.Task.run("compile", ["--warnings-as-errors"])

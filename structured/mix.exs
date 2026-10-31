@@ -11,11 +11,11 @@ defmodule GenAgentStructured.MixProject do
 
   defp deps do
     [
-      {:gen_agent, path: "../.."},
+      {:gen_agent, "~> 0.11.0"},
       {:jason, "~> 1.4"},
       {:ex_json_schema, "~> 0.11.5"},
-      {:gen_agent_claude, path: "../claude", optional: true},
-      {:gen_agent_codex, path: "../codex", optional: true}
+      {:gen_agent_claude, "~> 0.5.0", optional: true},
+      {:gen_agent_codex, "~> 0.8.0", optional: true}
     ]
   end
 end
