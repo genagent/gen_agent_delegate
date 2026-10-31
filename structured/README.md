@@ -5,10 +5,10 @@ Conversation reuse is explicit machinery underneath that contract. This separate
 Mix package changes **no core, wrapper, backend, server or MCP APIs**.
 
 This is an unpublished, local source package (version `0.0.0`) extracted from
-commit `630d484a8846ad90d068a1e58ba35bbd1003a10b`. From an application in this
-checkout, add `{:gen_agent_structured, path: "integrations/structured"}` (adjust
-the path relative to that application's `mix.exs`). The package uses the sibling
-GenAgent source and optional Claude/Codex adapter packages. JSON encoding and
+commit `630d484a8846ad90d068a1e58ba35bbd1003a10b`. From an application,
+add `{:gen_agent_structured, path: "path/to/gen_agent_delegate/structured"}`
+to that application's `mix.exs`. The package uses published `gen_agent` and the
+optional `gen_agent_claude` and `gen_agent_codex` adapter packages. JSON encoding and
 local schema validation add Jason and ExJsonSchema dependencies. Applications
 using a built-in provider must also include its corresponding adapter dependency;
 custom provider modules can implement `GenAgent.Structured.Provider`.
@@ -253,7 +253,7 @@ provider failures remain visible rather than degrading to an unconstrained call.
 ## Provider-free verification
 
 ```sh
-cd integrations/structured
+cd structured
 mix deps.get
 mix format --check-formatted
 mix compile --warnings-as-errors

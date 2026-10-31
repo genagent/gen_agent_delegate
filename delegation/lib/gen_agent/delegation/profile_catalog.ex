@@ -207,7 +207,7 @@ defmodule GenAgent.Delegation.ProfileCatalog do
 
   defp error(code, message), do: {:error, %{code: code, message: message}}
 
-  # Bundled ordinary definitions, adapted from integrations/structured/examples/
+  # Bundled ordinary definitions, adapted from structured/examples/
   # profiles.exs. Keeping data in this compiled module avoids evaluating example
   # source at runtime. Names and schemas remain inspectable and replaceable.
   defp builtins do
